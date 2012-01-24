@@ -4,6 +4,11 @@
  * Implementation of hook_menu().
  */
 function cod_api_menu(){
+  // This line is new.
+  // So is this one.
+  // More of a fidd.
+  // No punctuation in this one
+
   $items = array();
 
   $items['cod-api/combined'] = array(
