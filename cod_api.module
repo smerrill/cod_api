@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_menu().
  */
-function cod_api_menu() {
+function cod_api_menu(){
   $items = array();
 
   $items['cod-api/combined'] = array(
@@ -77,7 +77,7 @@ function _cod_api_get_nodes_by_type($type) {
             WHERE n.type = "%s" AND n.status = 1
             ORDER BY n.sticky DESC, n.created DESC';
   $result = db_query($query, $type);
-  while ($row = db_fetch_object($result)) {
+  while($row = db_fetch_object($result)) {
     $node = node_load($row->nid);
     if (!empty($node)) {
       $nodes[] = _cod_api_node_to_json($node);
